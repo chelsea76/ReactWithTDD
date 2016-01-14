@@ -4,7 +4,8 @@
   "description": "Learn building React app with TDD Step by Step (http://spencerdixon.com/blog/test-driven-react-tutorial.html)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --compilers js:babel-register --require ./test/test_helper.js --recursive",
+    "test:watch": "npm test -- --watch",
     "build": "webpack",
     "dev": "webpack-dev-server --port 3000 --devtool eval --progress --colors --hot --content-base dist"
   },
@@ -15,6 +16,12 @@
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "babel-register": "^6.4.3",
+    "chai": "^3.4.1",
+    "enzyme": "^1.3.0",
+    "mocha": "^2.3.4",
+    "react-addons-test-utils": "^0.14.6",
+    "sinon": "^1.17.2",
     "webpack": "^1.12.11",
     "webpack-dev-server": "^1.14.1"
   },
